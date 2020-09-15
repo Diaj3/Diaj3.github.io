@@ -3,7 +3,7 @@
 
     <!-- Basic -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -81,7 +81,7 @@
 				<span>I am a </span>
 				<span class="cd-words-wrapper">
 					<b class="is-visible">Web Developer</b>
-                    <b>fitness enthusiast</b>
+                    <b>Fitness Enthusiast</b>
                     <b>FullStack Developer</b>
 				</span>
 			</h3>
@@ -121,8 +121,9 @@
                         <h2>About Me</h2>
                         <p> #TODO </p>
 						<p> #TODO</p>
-
-                        <a href="#" class="sim-btn btn-hover-new" data-text="Download CV"><span>Download CV</span></a>
+                        <form method="get" action="curriculum.pdf">
+                        <button class="sim-btn btn-hover-new" type="submit" data-text="Download CV"><span>Download CV</span></button>
+                    </form>
                     </div><!-- end messagebox -->
                 </div><!-- end col -->
 
@@ -146,10 +147,9 @@
 				<div class="col-md-4 col-sm-6 col-lg-4">
 					<div class="post-box">
 						<div class="post-thumb">
-							<img src="uploads/blog-01.jpg" class="img-fluid" alt="post-img" />
+							<img src="uploads/movie.png" class="img-fluid" alt="post-img" />
 							<div class="date">
-								<span>06</span>
-								<span>Aug</span>
+								<a href="https://github.com/Diaj3" class="fa fa-github" style="font-size: 23px; background: #313131; color: white;"></a>
 							</div>
 						</div>
 						<div class="post-info">
@@ -166,10 +166,9 @@
 				<div class="col-md-4 col-sm-6 col-lg-4">
 					<div class="post-box">
 						<div class="post-thumb">
-							<img src="uploads/blog-02.jpg" class="img-fluid" alt="post-img" />
+							<img src="uploads/ssc.png" class="img-fluid" alt="post-img" />
 							<div class="date">
-								<span>06</span>
-								<span>Aug</span>
+								<a href="https://github.com/Diaj3" class="fa fa-github" style="font-size: 23px; background: #313131; color: white;"></a>
 							</div>
 						</div>
 						<div class="post-info">
@@ -188,8 +187,7 @@
 						<div class="post-thumb">
 							<img src="uploads/blog-03.jpg" class="img-fluid" alt="post-img" />
 							<div class="date">
-								<span>06</span>
-								<span>Aug</span>
+								<a href="https://github.com/Diaj3" class="fa fa-github" style="font-size: 23px; background: #313131; color: white;"></a>
 							</div>
 						</div>
 						<div class="post-info">
@@ -214,10 +212,10 @@
         <div class="container">
             <div class="section-title text-left">
 				<h3 style="color: black;">Contact</h3>
-                <p style="color: grey;">Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
+                <p style="color: grey;">If you want to talk, you can find me in the following websites or shoot me a mail/text:</p>
 				
 				<style>
-					.fa {
+					#icon, #parent {
   padding: 20px;
   font-size: 30px;
   width: 70px;
@@ -228,17 +226,20 @@
 				</style>
 
 				<div style="margin-top: 20px; margin-bottom: 0%;"><center>
-				<a href="#" class="fa fa-github" style="
+				<a href="https://github.com/Diaj3" id="icon" class="fa fa-github" style="
 				background: #313131;
   color: white;"></a>
 
-<a href="#" class="fa fa-linkedin" style="
+<a href="https://www.linkedin.com/in/jo%C3%A3o-dias-181998162/" id="icon" class="fa fa-linkedin" style="
 background: #395ca7;
 color: white;"></a>
 
-<a href="#" class="fa fa-phone" style="
+<div id="parent" class="fa fa-phone" style="
 				background: #2eb858;
-  color: white;"></a></center>
+  color: white;">
+  </div>
+  <div id="popup" style="display: none">Phone number: +351 927740086</div>
+</center>
 				</div>
 
 			</div><!-- end title -->
@@ -247,7 +248,7 @@ color: white;"></a>
                 <div class="col-md-12">
                     <div class="contact_form">
                         <div id="message"></div>
-                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                        <form id="contactForm" name="sentMessage" novalidate="novalidate" action="mailto:joaomadias@ua.pt" method="post" enctype="text/plain">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
@@ -307,6 +308,13 @@ color: white;"></a>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
     <script src="js/jquery.vide.js"></script>
+
+    <script>
+        var e = document.getElementById('parent');
+        e.onmouseover = function() {
+            document.getElementById('popup').style.display = 'block';
+        }
+        </script>
 
 </body>
 </html>
